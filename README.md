@@ -13,3 +13,16 @@
 
 # Deadline
 <code>2/20/2021</code>, on <strong>Github</strong>
+
+
+# Grades alocation
+// 10 marks in total
+// 1) based on the follwoing:
+// a) easy to use  and pretty look 3
+// b) resposnive design 2
+
+// c) clean code 2
+// d) show list for the user 1
+// e) update 1
+// f) delete 1
+
