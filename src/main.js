@@ -1,3 +1,5 @@
+
+
 var students = [];
 
 document.getElementById('submit').addEventListener('click', () => {
@@ -15,7 +17,7 @@ document.getElementById('submit').addEventListener('click', () => {
 	// Show success message
 	showMessage('success');
 
-    students = null;
+    
 });
 
 function inputValidation(name, id, gdpa) {
@@ -35,11 +37,11 @@ function inputValidation(name, id, gdpa) {
 	}
 }
 
-function insertStudent(name, id, gdpa) {
+function insertStudent(Name, Id, Gdpa) {
 	let student = {
-		name: name,
-		id: id,
-		gdpa: gdpa,
+		name: Name,
+		id: Id,
+		gdpa: Gdpa,
 	};
 	students.push(student);
     console.log('students array: ', students);
@@ -51,6 +53,24 @@ function showMessage(event){
     }else{
         alert('Faild to add student')
     }
+}
+
+// 
+function print(){
+
+	var output = '';
+
+    for (var i in students) {
+        var student = [];
+
+        for (var Propertie in students[i]) {
+            student.push(Propertie + ': ' + students[i][Propertie]);
+        }
+
+        output += "<li>" + student.join('<br>') + "</li>";
+    }
+
+	document.getElementById("names").innerHTML = "<ol>" + output + "</ol>";
 }
 
 // This week task:
