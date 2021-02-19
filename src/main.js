@@ -73,6 +73,20 @@ function print(){
 	document.getElementById("names").innerHTML = "<ol>" + output + "</ol>";
 }
 
+//
+function Delete() {
+	let deleteStu = document.getElementById("idDelete").value;
+
+	for(var i in students) {
+
+		if(students[i]["id"] == deleteStu){
+		 students.splice(i,1);
+		 alert("student has deleted");
+		 return;	
+	    }   	
+    } 
+  alert("student not fiond");
+}
 // This week task:
 // Show list of students 
 // Update student
