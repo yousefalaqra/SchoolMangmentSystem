@@ -55,7 +55,7 @@ function showMessage(event){
     }
 }
 
-// 
+// Show list of students 
 function print(){
 
 	var output = '';
@@ -73,8 +73,9 @@ function print(){
 	document.getElementById("names").innerHTML = "<ol>" + output + "</ol>";
 }
 
-//
+// Delete student
 function Delete() {
+
 	let deleteStu = document.getElementById("idDelete").value;
 
 	for(var i in students) {
@@ -87,6 +88,48 @@ function Delete() {
     } 
   alert("student not fiond");
 }
+
+// Update student
+var index = -1;
+function check(){
+	let isFound = document.getElementById("idToUpdate").value;
+
+	for(var i in students) {
+		if(students[i]["id"] == isFound){	 
+		 index = i;
+		 document.getElementById("show").style.display = 'block';
+		 return;	
+		}
+    }
+	alert("student is not Found");
+    index = -1;
+}
+
+function Update() {
+	let name = document.getElementById('UpdateName').value;
+	let id = document.getElementById('UpdateId').value;
+	let gdpa = document.getElementById('UpdateGdpa').value;
+       
+   console.log(name);
+   console.log(id);
+   console.log(gdpa);
+   console.log(index);
+
+   if(index != -1){
+
+    if(name != '')
+	students[index]["name"] = name;
+
+	if(id != '')
+	students[index]["id"] = id;
+
+	if(gdpa != '')
+	students[index]["gdpa"] = gdpa;
+    alert("student Update");
+   }
+   alert("student is not Update");
+}
+
 // This week task:
 // Show list of students 
 // Update student
