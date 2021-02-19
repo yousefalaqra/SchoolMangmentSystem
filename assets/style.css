@@ -1,0 +1,20 @@
+body{
+
+    background-color: rgba(50, 65, 80, 0.9);
+}
+.container{
+    padding: 30px;
+    margin: 50px;
+    border: 2px solid wheat;
+    border-radius: 10px ;
+    background-color: rgba(174, 185, 196,0.9) ;
+    
+}
+.from-control ,input[type=text], input[type=number]{
+    width: 30%;
+    padding: 9px;
+    margin: 5px 0 3px 0;
+    background: rgba(253, 253, 255, 0.9);
+    border-radius: 10px ;
+  
+}
