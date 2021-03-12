@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>School Managment System</title>
-	</head>
-	<body>
-		<div class="container">
-			<form>
-				<!-- student name -->
-				<div class="from-control">
-					<label for="name">Student Name</label>
-					<input type="text" id="name" placeholder="jo aqra" />
-				</div>
-				<!-- student name -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMS</title>
+  <link rel="stylesheet" href="https://bootswatch.com/4/materia/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-material-ui@4.0.1/material-ui.min.css">
+  <style>
+    .container {
+      max-width: 650px;
+      margin: 75px auto;
+    }
 
-				<!-- student id -->
-				<div class="from-control">
-					<label for="idNumber">Student ID</label>
-					<input type="number" id="idNumber" placeholder="411420876" />
-				</div>
-				<!-- student id -->
-
-				<!-- student gdpa -->
-				<div class="from-control">
-					<label for="gdpa">Student GDPA</label>
-					<input type="number" id="gdpa" placeholder="3.50" />
-				</div>
-				<!-- student gdpa -->
-
-				<button id="submit" type="submit">Add</button>
-			</form>
-		</div>
-		<script src="./src/main.js"></script>
-	</body>
+    @media screen and (max-width: 670px) {
+      .container {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container p-0">
+    <h1 class="text-center">Welcome to <span class="text-primary">SMS</span></h1>
+    <form id="newStudentForm" class="newStudentForm mt-5">
+      <h3>Add a New Student</h3>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" name="nameInput" placeholder="Student name" autocomplete="off" autofocus>          
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" name="idInput"  autocomplete="off" placeholder="ID">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" name="gpaInput"  autocomplete="off" placeholder="GPA">
+        </div>
+        <div class="col-2">
+          <button type="submit" class="btn btn-primary w-100">
+            <i data-feather="plus"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    <hr>
+    <input type="text" id="searchInput" class="form-control mb-3" placeholder="Search by student name/ID/GPA">
+    <ul id="studentsList" class="list-group"></ul>
+    <footer class="float-right mt-4">
+      <h4>
+        Students #: <span id="studentsCount"></span>
+      </h4>
+    </footer>
+  </main>
+  <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
+  <script src="app.js"></script><br>
+</body>
 </html>
